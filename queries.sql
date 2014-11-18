@@ -1,7 +1,7 @@
 
 
 use prism;
-drop table prism.symptom;
+
 CREATE TABLE prism.symptom
   (
      id           INT auto_increment PRIMARY KEY,
@@ -10,7 +10,7 @@ CREATE TABLE prism.symptom
      symptom_name VARCHAR(256)
   );
 
-drop table prism.patient;
+
 CREATE TABLE prism.patient
   (
      id              INT auto_increment PRIMARY KEY,
@@ -34,7 +34,7 @@ CREATE TABLE prism.patient
      emer_contact_phone INT
   );
 
-drop table prism.patient_symptom;
+
 CREATE TABLE prism.patient_symptom
   (
      patient_id     INT,
@@ -58,28 +58,28 @@ CREATE TABLE prism.patient_symptom
      drug_duration_uom INT
   );
 
-  drop table prism.patient_diagnosis;
+ 
   CREATE TABLE prism.patient_diagnosis
     (
        patient_id     INT,
        symptom_id     INT
     );
 
-    drop table prism.symptom_cat_color;
+    
     CREATE TABLE prism.symptom_cat_color
       (
          category     VARCHAR(256),
          color     VARCHAR(256)
       );
 
-      drop table prism.patient_treatment;
+    
       CREATE TABLE prism.patient_treatment
         (
            patient_id     INT,
            symptom_id     INT
         );
 
-        drop table prism.patient_drug;
+        
         CREATE TABLE prism.patient_drug
           (
              patient_id     INT,
@@ -87,7 +87,7 @@ CREATE TABLE prism.patient_symptom
           );
 
 
-truncate table prism.symptom_cat_color;
+
 insert into prism.symptom_cat_color(category, color) values('organic_symptoms','#F01010');
 insert into prism.symptom_cat_color(category, color) values('cognitive_symptoms','#F21010');
 insert into prism.symptom_cat_color(category, color) values('substance_use','#F01330');
@@ -120,7 +120,7 @@ insert into prism.symptom_cat_color(category, color) values('severity_functionin
 insert into prism.symptom_cat_color(category, color) values('past_treatment_history','#FDD010');
 
 
-truncate table prism.symptom;
+
 insert into prism.symptom(category, sub_category, symptom_name) values ('organic_symptoms','organic_symptoms','Generalized seizures');
 insert into prism.symptom(category, sub_category, symptom_name) values ('organic_symptoms','organic_symptoms','Partial seizures');
 insert into prism.symptom(category, sub_category, symptom_name) values ('organic_symptoms','organic_symptoms','Meningitis/encephalitis');
@@ -136,6 +136,7 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('organic
 insert into prism.symptom(category, sub_category, symptom_name) values ('organic_symptoms','involuntary_movements','Dyskinesia');
 insert into prism.symptom(category, sub_category, symptom_name) values ('cognitive_symptoms','cognitive_symptom','Recent memory loss');
 insert into prism.symptom(category, sub_category, symptom_name) values ('cognitive_symptoms','cognitive_symptom','Remote memory loss');
+insert into prism.symptom(category, sub_category, symptom_name) values ('cognitive_symptoms','severity','Impaired functioning');
 insert into prism.symptom(category, sub_category, symptom_name) values ('cognitive_symptoms','cognitive_symptom','Aphasia');
 insert into prism.symptom(category, sub_category, symptom_name) values ('cognitive_symptoms','cognitive_symptom','Apraxia');
 insert into prism.symptom(category, sub_category, symptom_name) values ('cognitive_symptoms','cognitive_symptom','Agnosia');
@@ -143,15 +144,15 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('cogniti
 insert into prism.symptom(category, sub_category, symptom_name) values ('cognitive_symptoms','cognitive_symptom','Poor attention');
 insert into prism.symptom(category, sub_category, symptom_name) values ('cognitive_symptoms','cognitive_symptom','Visuaspatial disorientation');
 insert into prism.symptom(category, sub_category, symptom_name) values ('cognitive_symptoms','cognitive_symptom','Personality change');
-insert into prism.symptom(category, sub_category, symptom_name) values ('cognitive_symptoms','severity','Impaired functioning');
 insert into prism.symptom(category, sub_category, symptom_name) values ('cognitive_symptoms','severity','Minimal impairment in functioning');
 insert into prism.symptom(category, sub_category, symptom_name) values ('cognitive_symptoms','severity','No impairment in functioning');
 insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use','substance','Nicotine');
 insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use','substance','Alchohol');
 insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use','substance','Cannabis');
-insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use','substance','Cocaine');
+insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use','substance','Benzodiazepine');
 insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use','substance','Opinoids');
-insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use','substance','Hallucinogen');
+insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use','substance','Cocaine');
+insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use','substance','Hallucinogens');
 insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use','substance','Others');
 insert into prism.symptom(category, sub_category, symptom_name) values ('psychotic_symptoms1','delusions','Paranoid');
 insert into prism.symptom(category, sub_category, symptom_name) values ('psychotic_symptoms1','delusions','Reference');
@@ -192,7 +193,7 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('mood_sy
 insert into prism.symptom(category, sub_category, symptom_name) values ('mood_symptoms','depressive_symptoms','Decreased self esteem');
 insert into prism.symptom(category, sub_category, symptom_name) values ('mood_symptoms','depressive_symptoms','Guilt');
 insert into prism.symptom(category, sub_category, symptom_name) values ('mood_symptoms','depressive_symptoms','Hopelessness/worthlessness/helplessness');
-insert into prism.symptom(category, sub_category, symptom_name) values ('mood_symptoms','depressive_symptoms','Death wishes/suicidal attempt');
+insert into prism.symptom(category, sub_category, symptom_name) values ('mood_symptoms','depressive_symptoms','Death wishes/Suicidal ideas');
 insert into prism.symptom(category, sub_category, symptom_name) values ('mood_symptoms','depressive_symptoms','Suicidal attempt');
 insert into prism.symptom(category, sub_category, symptom_name) values ('mood_symptoms','depressive_symptoms','Decreased sleep');
 insert into prism.symptom(category, sub_category, symptom_name) values ('mood_symptoms','depressive_symptoms','Decrease appetite');
@@ -274,16 +275,16 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('trauma_
 insert into prism.symptom(category, sub_category, symptom_name) values ('trauma_related_symptoms','other','Unreal feeling of others');
 insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','symptom','Seizures (non-epileptic)');
 insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','symptom','Motor deficit');
+insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','symptom','Stupor');
 insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','symptom','Trance/possession');
 insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','symptom','Fugue');
 insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','symptom','Amnesia');
 insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','symptom','Identity');
-insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','symptom','Stupor');
 insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','symptom','Others');
 insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','stressors','Family');
 insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','stressors','Interpersonal');
 insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','stressors','Financial');
-insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','stressors','Professional');
+insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','stressors','Work/Academic');
 insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','stressors','Others');
 insert into prism.symptom(category, sub_category, symptom_name) values ('somatic_symptoms','symptom','Pain');
 insert into prism.symptom(category, sub_category, symptom_name) values ('somatic_symptoms','symptom','Skin sensation');
@@ -313,22 +314,7 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('biologi
 insert into prism.symptom(category, sub_category, symptom_name) values ('biological_symptoms','sexual','Dyspareunia');
 insert into prism.symptom(category, sub_category, symptom_name) values ('biological_symptoms','sexual','Paraphilias');
 insert into prism.symptom(category, sub_category, symptom_name) values ('biological_symptoms','sexual','Others');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','cardiac','Hypertension');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','cardiac','Ischemic heart disease');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','cardiac','Arrhythmia');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','cardiac','Valvular heart disease');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','cardiac','Cardiac myopathy');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','respiratory','Asthma');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','respiratory','COPD');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','respiratory','Allergic bronchitis');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','respiratory','URTI');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','respiratory','LRTI');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','gastro_intestinal','Cirrhosis');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','gastro_intestinal','Portal hypertension');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','gastro_intestinal','Hepatitis');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','gastro_intestinal','Inflamatory bowel disease');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','gastro_intestinal','Gastric ulcer');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','gastro_intestinal','Pile/fissure/fistula');
+
 insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','neurological','CVA-stroke');
 insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','neurological','Parkinsons');
 insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','neurological','Wilsons');
@@ -339,13 +325,29 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('medical
 insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','neurological','CNS infection');
 insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','neurological','Tardive symptoms');
 insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','neurological','Tics');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','endocrine','Diabetes mellitus');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','endocrine','Obesity');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','endocrine','Hypothyroidism');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','endocrine','Hyperthyroidism');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','endocrine','Cushings');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','endocrine','Addisons');
-insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','endocrine','Acromegaly');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','endocrine','Diabetes mellitus');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','endocrine','Obesity');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','endocrine','Hypothyroidism');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','endocrine','Hyperthyroidism');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','endocrine','Cushings');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','endocrine','Addisons');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','endocrine','Acromegaly');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','cardiac','Hypertension');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','cardiac','Ischemic heart disease');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','cardiac','Arrhythmia');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','cardiac','Valvular heart disease');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history1','cardiac','Cardiac myopathy');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','respiratory','Asthma');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','respiratory','COPD');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','respiratory','Allergic bronchitis');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','respiratory','URTI');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','respiratory','LRTI');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','gastro_intestinal','Cirrhosis');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','gastro_intestinal','Portal hypertension');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','gastro_intestinal','Hepatitis');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','gastro_intestinal','Inflamatory bowel disease');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','gastro_intestinal','Gastric ulcer');
+insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','gastro_intestinal','Pile/fissure/fistula');
 insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','others','Malignancy');
 insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','others','Arthritis');
 insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','others','Connective tissue disorder');
@@ -358,6 +360,7 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('medical
 insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','others','Tuberculosis');
 insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','others','Other systemic infection');
 insert into prism.symptom(category, sub_category, symptom_name) values ('medical_history2','others','Tuberculosis');
+
 insert into prism.symptom(category, sub_category, symptom_name) values ('past_history','episode','Depression');
 insert into prism.symptom(category, sub_category, symptom_name) values ('past_history','episode','Mania');
 insert into prism.symptom(category, sub_category, symptom_name) values ('past_history','episode','Hypomania');
@@ -365,8 +368,10 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('past_hi
 insert into prism.symptom(category, sub_category, symptom_name) values ('past_history','episode','Other psychosis');
 insert into prism.symptom(category, sub_category, symptom_name) values ('past_history','episode','Anxiety');
 insert into prism.symptom(category, sub_category, symptom_name) values ('past_history','episode','OCD');
-insert into prism.symptom(category, sub_category, symptom_name) values ('past_history','episode','Somatoform');
-insert into prism.symptom(category, sub_category, symptom_name) values ('past_history','episode','Substance');
+insert into prism.symptom(category, sub_category, symptom_name) values ('past_history','episode','Somatoform disorder');
+insert into prism.symptom(category, sub_category, symptom_name) values ('past_history','episode','Substance Dependence');
+
+
 insert into prism.symptom(category, sub_category, symptom_name) values ('premorbid_personality','cluster_a','Suspicious');
 insert into prism.symptom(category, sub_category, symptom_name) values ('premorbid_personality','cluster_a','Keeping grudges');
 insert into prism.symptom(category, sub_category, symptom_name) values ('premorbid_personality','cluster_a','Sensitive to setbacks');
@@ -393,7 +398,9 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('premorb
 insert into prism.symptom(category, sub_category, symptom_name) values ('premorbid_personality','cluster_c','Being subordinate');
 insert into prism.symptom(category, sub_category, symptom_name) values ('premorbid_personality','cluster_c','Allow others to make important decision');
 insert into prism.symptom(category, sub_category, symptom_name) values ('premorbid_personality','cluster_c','Helpless when alone');
-insert into prism.symptom(category, sub_category, symptom_name) values ('treatment_side_effects','neurological','Tremor');
+
+insert into prism.symptom(category, sub_category, symptom_name) values 
+('treatment_side_effects','neurological','Tremor');
 insert into prism.symptom(category, sub_category, symptom_name) values ('treatment_side_effects','neurological','Rigidity');
 insert into prism.symptom(category, sub_category, symptom_name) values ('treatment_side_effects','neurological','Bradykinesia');
 insert into prism.symptom(category, sub_category, symptom_name) values ('treatment_side_effects','neurological','Hypersalivation');
@@ -438,10 +445,13 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('family_
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','sibling','Psychosis');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','sibling','Bipolar');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','sibling','Depression');
-insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','sibling','Substance use');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','sibling','Substance dependence');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','sibling','Suicide');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','sibling','Anxiety');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','sibling','OCD');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','sibling','Somatoform disorder');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','sibling','Dementia');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','sibling','Mental retardation');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','sibling','Other');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','2nd_relative','Psychosis');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','2nd_relative','Bipolar');
@@ -451,63 +461,70 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('family_
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','2nd_relative','Anxiety');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','2nd_relative','OCD');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_psychiatric','2nd_relative','Other');
-insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','parent','Cardiovascular');
+
+
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','parent','Cardiovascular disease');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','parent','Diabetes');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','parent','Hypertension');
-insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','parent','Neurological');
-insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','parent','Infections');
-insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','parent','Asthma');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','parent','Neurological disorder');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','parent','Epilepsy');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','parent','Asthma/Allergy');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','parent','Endocrine');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','parent','Other');
-insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','sibling','Cardiovascular');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','sibling','Cardiovascular disease');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','sibling','Diabetes');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','sibling','Hypertension');
-insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','sibling','Neurological');
-insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','sibling','Infections');
-insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','sibling','Asthma');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','sibling','Neurological disorder');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','sibling','Epilepsy');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','sibling','Asthma/Allergy');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','sibling','Endocrine');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','sibling','Other');
-insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','2nd_relative','Cardiovascular');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','2nd_relative','Cardiovascular disease');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','2nd_relative','Diabetes');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','2nd_relative','Hypertension');
-insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','2nd_relative','Neurological');
-insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','2nd_relative','Infections');
-insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','2nd_relative','Asthma');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','2nd_relative','Neurological disorder');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','2nd_relative','Epilepsy');
+insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','2nd_relative','Asthma/Allergy');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','2nd_relative','Endocrine');
 insert into prism.symptom(category, sub_category, symptom_name) values ('family_history_medical','2nd_relative','Other');
+
+
 insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','developmental','Prenatal complications');
 insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','developmental','Birth complications');
 insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','developmental','Developmental delay');
 insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','developmental','Febrile seizures');
+insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','sexual','Masturbatory anxiety');
+insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','sexual','High risk sexual behaviour');
+insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','sexual','Misconceptions');
+insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','sexual','Identitiy/Orientation difficulties');
+insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','Menstrual/Reproductive','Normal cycles');
+insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','Menstrual/Reproductive','Oligomenorrhea');
+insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','Menstrual/Reproductive','Amenorrhea');
+insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','Menstrual/Reproductive','Polymenorrhea');
+insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','Menstrual/Reproductive','Premenstrual dysphoria');
+insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','Menstrual/Reproductive','Currently pregnant');
+insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','Menstrual/Reproductive','Currently lactating');
 insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','childhood','Nail biting');
 insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','childhood','Thumb sucking');
 insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','childhood','Conduct symptom');
 insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','childhood','School refusal');
 insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','childhood','Temper tantrums');
 insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','childhood','Persistent enuresis');
-insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','sexual','Masturbatory anxiety');
-insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','sexual','High risk sexual behaviour');
-insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','sexual','Marital discord');
-insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','sexual','Interpersonal difficulties');
-insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','menstrual','Normal cycles');
-insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','menstrual','Oligomenorrhea');
-insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','menstrual','Amenorrhea');
-insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','menstrual','Polymenorrhea');
-insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','menstrual','Polymenorrhea');
-insert into prism.symptom(category, sub_category, symptom_name) values ('personal_history','menstrual','Premenstrual dysphoria');
+
 insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','psychological','Death of family/friend');
 insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','psychological','Financial loss');
 insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','psychological','Occupational (Job loss)');
 insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','psychological','Migration');
 insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','psychological','Interpersonal conflict');
+insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','psychological','Marital discord');
 insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','biological','Pregnancy');
 insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','biological','Post partum');
 insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','biological','Menopause');
 insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','biological','Medical illness');
 insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','biological','Infection');
 insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','legal','Divorce');
-insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','legal','Violence');
-insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','legal','Absent');
+insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','legal','Criminal dispute');
+insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','legal','Civil dispute');
 insert into prism.symptom(category, sub_category, symptom_name) values ('stressors','legal','Other');
 insert into prism.symptom(category, sub_category, symptom_name) values ('physical_examination','type','Height');
 insert into prism.symptom(category, sub_category, symptom_name) values ('physical_examination','type','Weight');
@@ -622,14 +639,15 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('behvior
 
 insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use_auto','dependence','Craving');
 insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use_auto','dependence','Tolerance');
-insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use_auto','dependence','Withdrawal');
+insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use_auto','dependence','Currently in Withdrawal');
 insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use_auto','dependence','Salience');
 insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use_auto','dependence','Use Despite Harm');
 
 insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use_auto','complication','Convulsions');
 insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use_auto','complication','Amnesia');
 insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use_auto','complication','Confabulation');
-insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use_auto','complication','Cognitive Decline');
+insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use_auto','complication','Dementia');
+insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use_auto','complication','Delirium');
 
 insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use_auto','usage','Currently abstinent');
 insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use_auto','usage','Currently active use');
@@ -760,8 +778,8 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('diagnos
 insert into prism.symptom(category, sub_category, symptom_name) values ('diagnosis','organic','Age related cognitive decline');
 insert into prism.symptom(category, sub_category, symptom_name) values ('diagnosis','organic','Dementia in Creutzfeldt Jakob disease');
 
-insert into prism.symptom(category, sub_category, symptom_name) values ('severity_functioning','cisf','1 - Indefinite symptoms with Premorbid functioning levels');
-insert into prism.symptom(category, sub_category, symptom_name) values ('severity_functioning','cisf','2 – Established symptoms with minimal disruption in personal care, social relations, or work');
+insert into prism.symptom(category, sub_category, symptom_name) values ('severity_functioning','cisf','1 - Doubtful symptoms with Premorbid functioning levels');
+insert into prism.symptom(category, sub_category, symptom_name) values ('severity_functioning','cisf','2 – Definite symptoms with minimal disruption in personal care, social relations, or work');
 insert into prism.symptom(category, sub_category, symptom_name) values ('severity_functioning','cisf','3 – Definite symptomatology with moderate dysfunction in personal care, social relations, or work');
 insert into prism.symptom(category, sub_category, symptom_name) values ('severity_functioning','cisf','4 – Marked symptoms with severe dysfunction in personal care, social relations, or work (include loss of job, hospitalisation, aggression, suicidality)');
 
@@ -783,10 +801,8 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('diagnos
 
 insert into prism.symptom(category, sub_category, symptom_name) values ('dissociative_symptoms','symptom','Sensory');
 
-insert into prism.symptom(category, sub_category, symptom_name) values ('premorbid_personality','adjusted','Well adjusted');
-insert into prism.symptom(category, sub_category, symptom_name) values ('premorbid_personality','adjusted','Poorly adjusted');
-insert into prism.symptom(category, sub_category, symptom_name) values ('premorbid_personality','adjusted','Trait');
-insert into prism.symptom(category, sub_category, symptom_name) values ('premorbid_personality','adjusted','Disorder');
+insert into prism.symptom(category, sub_category, symptom_name) values ('Personality','adjusted','Well adjusted/Poorly adjusted');
+insert into prism.symptom(category, sub_category, symptom_name) values ('Personality','adjusted','Trait/Disorder');
 
 
 insert into prism.symptom(category, sub_category, symptom_name) values ('treatment','substance_use','Anticraving drugs');
@@ -985,4 +1001,3 @@ insert into prism.symptom(category, sub_category, symptom_name) values ('drug_gr
 
 insert into prism.symptom(category, sub_category, symptom_name) values ('organic_symptoms','organic_symptoms','Tics');
 insert into prism.symptom(category, sub_category, symptom_name) values ('organic_symptoms','organic_symptoms','Delirium');
-insert into prism.symptom(category, sub_category, symptom_name) values ('substance_use','substance','Benzodiazepine');

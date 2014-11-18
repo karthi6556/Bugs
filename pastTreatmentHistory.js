@@ -31,7 +31,11 @@ app.controller('PastTreatmentHistoryController', function($scope, $filter, $log,
         // no inputType -> default is text
         //getUrl: function(row) { return '#/' + row.age; },
         // disabled: true
-      }, {
+      },{
+		field: 'dose',
+        title: 'Dose'
+        //Modified Here,Added Dose
+      },{
         field: 'duration',
         inputType: 'number',
         title: 'Duration'

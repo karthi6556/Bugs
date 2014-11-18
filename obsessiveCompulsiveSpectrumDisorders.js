@@ -89,11 +89,11 @@ $scope.gridImpulseDyscontrol = {
         // no inputType -> default is text
         //getUrl: function(row) { return '#/' + row.age; },
         disabled: true
-      }, {
+      },/* {
         field: 'duration',
         title: 'Duration',
         inputType: 'number'
-      }, {
+      }, */{
         field: 'durationUOM',
         title:' ',
         inputType: 'select',
@@ -146,11 +146,11 @@ $scope.gridImpulseDyscontrol = {
         // no inputType -> default is text
         //getUrl: function(row) { return '#/' + row.age; },
         disabled: true
-      }, {
+      },/* {
         field: 'duration',
         title: 'Duration',
         inputType: 'number'
-      }, {
+      }, */{
         field: 'durationUOM',
         title:' ',
         inputType: 'select',

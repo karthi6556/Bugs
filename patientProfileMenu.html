@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form class="ng-scope ng-pristine ng-valid" id="sysDashboard" style="padding: 0px 20px;">
+  <div  align="center">
+
+  <!-- Header left begin-->
+     <div style = "text-align:left; float:left;">
+      <B>&nbsp;&nbsp;Name of doctor</B> : {{ user }}
+     </div>
+  <!-- Header left end-->
+
+
+  <!-- Header right begin-->
+     <div style = "text-align:right; float:right">
+        <B>Patient Number</B> : {{patientNumber}}&nbsp;&nbsp;
+     </div>
+  <!-- Header right end-->
+  </div>
+  <div>
+
+  <div align="center">
+    <h2 class="form-signin-heading">Patient Profile Menu</h2>
+  </div>
+  <BR/>
+  
+  <div class="row">
+                        <div class="col-lg-6 col-xs-6" ng-click="symptomProfile()">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h3>
+Adult Symptom Profile                                    </h3>
+                                   
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-6 col-xs-6" ng-click="behavioralSymptomsOfChild()">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h3>
+                                        Childhood Symptom Profile
+										</h3>
+                               
+                                </div>
+                                
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+						
+						
+						
+						</div>
+	
+  
+  
+  <div class="row">
+                        <div class="col-lg-3 col-xs-3" ng-click="medicalHistory()">
+                            <!-- small box -->
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                    <h3>
+                                        Medical History
+                                    </h3>
+                                   
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-3 col-xs-3" ng-click="pastHistory()">
+                            <!-- small box -->
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                    <h3>
+                                        Past History
+										</h3>
+                               
+                                </div>
+                                
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+						
+						  <div class="col-lg-3 col-xs-3" ng-click="stressors()">
+                           
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                    <h3>
+                                        Stressors/Life Events
+                                    </h3>
+                                   
+                                </div>
+                              
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+						
+						 <div class="col-lg-3 col-xs-3" ng-click="pastTreatmentHistory()">
+                            <!-- small box -->
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                    <h3>
+                                        Past treatment history
+                                    </h3>
+                                   
+                                </div>
+                                
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+						
+						
+						</div>
+	
+	
+	
+	<div class="row">
+                        <div class="col-lg-3 col-xs-3" ng-click="premorbidPersonality()">
+                            <!-- small box -->
+                            <div class="small-box bg-orange">
+                                <div class="inner">
+                                    <h3>
+                                        Premorbid Personality
+                                    </h3>
+                                   
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-3 col-xs-3" ng-click="familyHistory()">
+                            <!-- small box -->
+                            <div class="small-box bg-orange">
+                                <div class="inner">
+                                    <h3>
+                                        Family History
+										</h3>
+                               
+                                </div>
+                                
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+						
+						  <div class="col-lg-3 col-xs-3" ng-click="personalHistory()">
+                           
+                            <div class="small-box bg-orange">
+                                <div class="inner">
+                                    <h3>
+                                        Personal History
+                                    </h3>
+                                   
+                                </div>
+                              
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+						
+						 <div class="col-lg-3 col-xs-3" ng-click="severityAndFunctioning()">
+                            <!-- small box -->
+                            <div class="small-box bg-orange">
+                                <div class="inner">
+                                    <h3>
+                                        Severity and Functioning
+                                    </h3>
+                                   
+                                </div>
+                                
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+						
+						
+						</div>
+	<div class="row">
+                        <div class="col-lg-3 col-xs-3" ng-click="physicalExamination()">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h3>
+                                        General Physical Examination
+                                    </h3>
+                                   
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-3 col-xs-3" ng-click="neurologicalExamination()">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h3>
+                                        Neurological Examination
+										</h3>
+                               
+                                </div>
+                                
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+						
+						  <div class="col-lg-3 col-xs-3" ng-click="mentalExamination()">
+                           
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h3>
+                                        Mental Examination
+                                    </h3>
+                                   
+                                </div>
+                              
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+						
+						 <div class="col-lg-3 col-xs-3" ng-click="treatmentSideEffects()">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h3>
+                                        Current Treatment Side Effects
+                                    </h3>
+                                   
+                                </div>
+                                
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+						
+						
+						</div>
+	<div class="row">
+                        <div class="col-lg-3 col-xs-3" ng-click="diagnosis()">
+                            <!-- small box -->
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                    <h3>
+                                        Diagnosis
+                                    </h3>
+                                   
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-3 col-xs-3" ng-click="lifeChart()">
+                            <!-- small box -->
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                    <h3>
+                                        Life Chart
+										</h3>
+                               
+                                </div>
+                                
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+						
+						  <div class="col-lg-3 col-xs-3" ng-click="investigation()">
+                           
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                    <h3>
+                                        Investigations
+                                    </h3>
+                                   
+                                </div>
+                              
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+						
+						 <div class="col-lg-3 col-xs-3" ng-click="treatmentDrugGroup()">
+                            <!-- small box -->
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                    <h3>
+                                        Treatment
+                                    </h3>
+                                   
+                                </div>
+                                
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+						
+						
+						</div>
+	<div class="row">
+	 <div class="col-lg-3 col-xs-3" >
+                           
+                           
+                        </div>
+                        <div class="col-lg-3 col-xs-3" ng-click="printClinicalSummary()">
+                            <!-- small box -->
+                            <div class="small-box bg-orange">
+                                <div class="inner">
+                                    <h3>
+                                        Print Clinical Summary
+                                    </h3>
+                                   
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-3 col-xs-3" ng-click="printPrescriptions()">
+                            <!-- small box -->
+                            <div class="small-box bg-orange">
+                                <div class="inner">
+                                    <h3>
+                                        Print Prescriptions
+										</h3>
+                               
+                                </div>
+                                
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+						
+						 
+						
+						 <div class="col-lg-3 col-xs-3" >
+
+                        </div><!-- ./col -->
+						
+						
+						</div>
+	 <div class="row">
+                        <div class="col-lg-6 col-xs-6" >
+  <button class="btn btn-success btn-block" ng-click="openNewPatient()">Back</button>
+      </div>
+	
+                        <div class="col-lg-6 col-xs-6" >
+      <button class="btn btn-success btn-block" ng-click="saveAndExit()">Save And Exit</button>
+  
+  </div>
+  </div>
+
+  <BR/>
+  <BR/>
+
+          </form>

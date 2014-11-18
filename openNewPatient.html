@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="container">
+  <form  class="ng-scope ng-pristine ng-valid">
+    <div class="container" align="center">
+    <h2 class="form-signin-heading">New Patient Registration Form</h2>
+  </div>
+  <BR/>
+    <div class="form-group" >
+      <div class="col-xs-5">
+        <input  class="form-control" type="text" ng-model="registration.name" placeholder="Name" />
+      </div>
+      <div class="col-xs-3">
+        <input  data-format="dd/MM/yyyy" class="form-control" type="date" ng-model="registration.dob"  />
+      </div>
+      <div class="col-xs-1">
+        <input  class="form-control" type="text" ng-model="registration.age" placeholder="Age" />
+      </div>
+      <div class="col-xs-2">
+        <select class="form-control" ng-model="registration.gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <!-- <div class="col-xs-2">
+        <input class="form-control" type="text" ng-model="registration.patientNumber" maxlength="5"  size="5" placeholder="Pat NO" />
+      </div> -->
+    </div>
+    <BR/>
+    <BR/>
+    <div class="form-group">
+      <div class="col-xs-11">
+        <input  class="form-control" type="text" ng-model="registration.address" placeholder="Address" />
+      </div>
+    </div>
+    <BR/>
+    <BR/>
+    <div class="form-group">
+      <div class="col-xs-3">
+        <input  class="form-control" type="text" ng-model="registration.landline" placeholder="Landline" />
+      </div>
+      <div class="col-xs-3">
+        <input  class="form-control" type="text" ng-model="registration.mobile1" placeholder="Cell phone" />
+      </div>
+      <div class="col-xs-5">
+        <input  class="form-control" type="text" ng-model="registration.mobile2" placeholder="Email Id" />
+      </div>
+    </div>
+    <BR/>
+    <BR/>
+    <div class="form-group">
+      <div class="col-xs-4">
+        <select class="form-control" ng-model="registration.occupation">
+          <option value="unemployed" selected>Unemployed</option>
+          <option value="homemaker">Homemaker</option>
+          <option value="selfemployed">Self employed</option>
+          <option value="professional">Professional</option>
+          <option value="business">Business</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+      <div class="col-xs-4">
+        <select class="form-control" ng-model="registration.marital">
+          <option value="married" selected>Married</option>
+          <option value="single">Single</option>
+          <option value="divorced">Divorced</option>
+        </select>
+      </div>
+      <div class="col-xs-3">
+        <select class="form-control"  ng-model="registration.referred">
+          <option value="referred">Referred</option>
+          <option value="self">Self</option>
+        </select>
+      </div>
+    </div>
+    <BR/>
+    <BR/>
+    <BR/>
+    <BR/>
+    <div class="form-group">
+      <div class="col-xs-3">
+        <input  class="form-control" type="text" ng-model="registration.informant" placeholder="Informant Name" />
+      </div>
+      <div class="col-xs-2">
+        <input  class="form-control" type="text" ng-model="registration.informantContact" placeholder="Informant Phone No" />
+      </div>
+      <div class="col-xs-3">
+        <input data-format="dd/MM/yyyy" class="form-control" type="date" ng-model="registration.assessmentDate"  />
+      </div>
+    </div>
+    <BR/>
+    <BR/>
+    <div class="form-group">
+      <div class="col-xs-5">
+        <input  class="form-control" type="text" ng-model="registration.emergencyContactName" placeholder="Emergency Contact Name" />
+      </div>
+      <div class="col-xs-3">
+        <input  class="form-control" type="text" ng-model="registration.emergencyContactRelationship" placeholder="Relationship" />
+      </div>
+      <div class="col-xs-3">
+        <input  class="form-control" type="text" ng-model="registration.emergencyContactPhone" placeholder="Contact No" />
+      </div>
+
+    </div>
+    <BR/>
+    <BR/>
+    <div class="form-group">
+    <button class="btn btn-primary" ng-click="createNewPatient()">Create Patient Record</button>
+
+  </div>
+  </form>
+</div>

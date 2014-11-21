@@ -1,10 +1,6 @@
-
-
 app.controller('ObsessiveCompulsiveSpectrumDisordersController', function($scope, $filter, $log,
   $location, authentication,
   dataFactory) {
-
-
   $scope.user = authentication.user.name;$scope.nameOfDoctor = authentication.nameOfDoctor.name;
 $scope.nameOfCenter = authentication.nameOfCenter.name;
 $scope.patientNumber = authentication.patientNumber.name;

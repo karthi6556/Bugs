@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Nov 24, 2014 at 11:26 AM
+-- Generation Time: Nov 24, 2014 at 11:24 PM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.22
 
@@ -474,10 +474,10 @@ INSERT INTO `symptom` (`id`, `category`, `sub_category`, `symptom_name`, `displa
 (432, 'physical_examination_neurological', 'others', 'Cerebellar signs', 4),
 (433, 'physical_examination_neurological', 'others', 'Dysarthria', 5),
 (434, 'physical_examination_neurological', 'others', 'Frontal release signs', 6),
-(435, 'additional_mental_status_examination', 'perception', 'Auditory hallucination', 1),
-(436, 'additional_mental_status_examination', 'perception', 'Visual hallucination', 2),
-(437, 'additional_mental_status_examination', 'perception', 'Olfactory hallucination', 3),
-(438, 'additional_mental_status_examination', 'perception', 'Tactile hallucination', 4),
+(435, 'additional_mental_status_examination', 'rapport', 'Auditory hallucination', 1),
+(436, 'additional_mental_status_examination', 'rapport', 'Visual hallucination', 2),
+(437, 'additional_mental_status_examination', 'rapport', 'Olfactory hallucination', 3),
+(438, 'additional_mental_status_examination', 'rapport', 'Tactile hallucination', 4),
 (439, 'additional_mental_status_examination', 'psychomotor_activity', 'Agitation', 1),
 (440, 'additional_mental_status_examination', 'psychomotor_activity', 'Retardation', 2),
 (441, 'additional_mental_status_examination', 'psychomotor_activity', 'Increased', 3),
@@ -874,7 +874,7 @@ INSERT INTO `symptom` (`id`, `category`, `sub_category`, `symptom_name`, `displa
 (830, 'medical_history2', 'others', 'Amputation', 4),
 (831, 'medical_history2', 'others', 'others', 7),
 (832, 'past_history', 'episode', 'other', 10),
-(834, 'additional_mental_status_examination', 'perception', 'Imagery', 5),
+(834, 'additional_mental_status_examination', 'rapport', 'Imagery', 5),
 (836, 'substance_use', 'substance', 'Solvent', 8);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
